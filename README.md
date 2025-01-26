@@ -80,5 +80,6 @@ You can generate the citation directly in R by running: citation("mltable")
 The core functionality of mltable relies on the following R packages. Please consider citing them as well:
 
 psych: Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. Retrieved from https://CRAN.R-project.org/package=psych
+
 multilevel: Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
-multilevel: Bliese, P. D. (2016). multilevel: Multilevel Functions [R package]. Retrieved from https://CRAN.R-project.org/package=multilevel
+
