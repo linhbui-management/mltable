@@ -1,6 +1,4 @@
-<img src="logo_mltable.png" alt="logo" style="float:right; width:200px;"> 
-
-# Calculating and Formatting Tables for Multilevel Data 
+# Calculating and Formatting Tables for Multilevel Data <img src="logo_mltable.png" align="right" />
 
 [![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
 
@@ -18,14 +16,19 @@ To install the `devtools` package, use the following command:
 install.packages("devtools")
 
 ## Install the package from GitHub
-devtools::install_github("linhbui.management/mltable")
 
+```r
+library(devtools)
+devtools::install_github("linhbui.management/mltable")
+```
 # Usage
 Here’s how to use the package:
 
 library(mltable)
 
 ## Level 1 Correlation Matrix (e.g., individual level)
+
+```r
 data <- teamstate
 var_list <- list(
     var1 = 3,
@@ -40,8 +43,12 @@ var_list <- list(
                                         "Negative Affect", "Psychological Safety"))
 
 print(result)>
+```
+
 ## Level 2 Correlation Matrix (e.g., group level)
 # Example usage
+
+```r
 data <- teamstate
 var_list2 <- list(
                   var1 = 5:14,
@@ -55,6 +62,7 @@ result <- corr_level2(data = teamstate,
                       rwg_scale = 7)
 
 print(result)
+```
 
 # Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
