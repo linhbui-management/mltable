@@ -8,15 +8,6 @@ It includes additional metrics such as mean, standard deviation, Cronbach's alph
 # Installation
 To install the package, use the following commands in R:
 
-## Install the devtools package if you don't already have it
-# Installation Instructions
-
-To install the `devtools` package, use the following command:
-
-install.packages("devtools")
-
-## Install the package from GitHub
-
 ```r
 library(devtools)
 devtools::install_github("linhbui.management/mltable")
@@ -24,11 +15,12 @@ devtools::install_github("linhbui.management/mltable")
 # Usage
 Here’s how to use the package:
 
-library(mltable)
+
 
 ## Level 1 Correlation Matrix (e.g., individual level)
 
 ```r
+library(mltable)
 data <- teamstate
 var_list <- list(
     var1 = 3,
@@ -91,13 +83,15 @@ Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
 If you use the mltable package in your work, please cite it as follows:
-Bui, L. (2025). mltable: A Package for Calculating and Formatting Correlation Matrices (Version 0.0.0.9000) [R package]. Retrieved from 
 
-You can generate the citation directly in R by running: citation("mltable")
+```r
+Bui, L. (2025). mltable: A Package for Calculating and Formatting Correlation Matrices (Version 0.0.0.9000) [R package]. Retrieved from 
+```
+You can generate the citation directly in R by running: 'citation("mltable")'
 
 The core functionality of mltable relies on the following R packages. Please consider citing them as well:
 
-psych: Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. Retrieved from https://CRAN.R-project.org/package=psych
-
-multilevel: Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
-
+```
+Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. Retrieved from https://CRAN.R-project.org/package=psych
+Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
+```
