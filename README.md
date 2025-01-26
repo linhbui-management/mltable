@@ -1,5 +1,7 @@
 # mltable - Calculating and Formatting Statistics Tables for Multilevel Data
 
+![Alt text](logo_mltable.png)
+
 [![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
 
 This R package provides tools for calculating and formatting correlation matrices for Level 1 and Level 2 data. 
