@@ -38,7 +38,6 @@ print(result)>
 ```
 
 ## Level 2 Correlation Matrix (e.g., group level)
-# Example usage
 
 ```r
 data <- teamstate
@@ -59,15 +58,15 @@ print(result)
 # Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-Fork the repository.
+1. Fork the repository.
 
-Create a new branch for your feature or bugfix.
+2. Create a new branch for your feature or bugfix.
 
-Commit your changes.
+3. Commit your changes.
 
-Submit a pull request.
+4. Submit a pull request.
 
-Please ensure your code follows the project's coding standards and includes appropriate tests.
+5. Please ensure your code follows the project's coding standards and includes appropriate tests.
 
 # License
 This project is licensed under the MIT License. See the LICENSE file for details.
@@ -85,13 +84,18 @@ Project Link: https://github.com/linhbui-management/mltable
 If you use the mltable package in your work, please cite it as follows:
 
 ```r
-Bui, L. (2025). mltable: A Package for Calculating and Formatting Correlation Matrices (Version 0.0.0.9000) [R package]. Retrieved from 
+Bui, L. (2025). mltable: A Package for Calculating and Formatting Correlation Matrices (Version 0.0.0.9000) [R package]. 
+Retrieved from https://github.com/linhbui-management/mltable.git
 ```
-You can generate the citation directly in R by running: 'citation("mltable")'
+You can generate the citation directly in R by running `citation('mltable')`
 
-The core functionality of mltable relies on the following R packages. Please consider citing them as well:
+The core functionality of `mltable` relies on R packages `psych` and `multilevel`. 
+Please consider citing them as well:
 
 ```
-Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. Retrieved from https://CRAN.R-project.org/package=psych
-Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
+Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. 
+Retrieved from https://CRAN.R-project.org/package=psych
+
+Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. 
+Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
 ```
