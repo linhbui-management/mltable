@@ -1,5 +1,7 @@
 # mltable - Calculating and Formatting Statistics Tables for Multilevel Data
 
+[![Build Status](https://app.travis-ci.com/linhbui-management/farsLinh.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/farsLinh)
+
 This R package provides tools for calculating and formatting correlation matrices for Level 1 and Level 2 data. 
 It includes additional metrics such as mean, standard deviation, Cronbach's alpha, and rwg.j.
 
