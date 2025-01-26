@@ -1,4 +1,4 @@
-# mltable - Calculating and Formatting Tables for Multilevel Data <img src="logo_mltable.png" align="right" width="200"/>
+# mltable - Calculating and Formatting Tables for Multilevel Data <img src="logo_mltable.png" align="right" width="220"/>
 
 [![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
 
