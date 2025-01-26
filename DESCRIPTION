@@ -1,0 +1,27 @@
+Package: mltable
+Title: Calculating and Formatting Statistics Tables for Multilevel Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Linh", "Bui", , "linhbui.management@gmail.com", role = c("aut", "cre"))
+Description: 
+    The 'mltable' package provides tools for generating descriptive statistics tables 
+    and correlation matrices for multilevel data. It includes functions for calculating 
+    level-1 and level-2 correlations, aggregating data by groups, and computing 
+    additional statistics such as means, standard deviations, Cronbach's alpha, and 
+    RWG(J). These functions are particularly useful for researchers working with 
+    hierarchical or nested data structures, such as teams, organizations, or repeated 
+    measures. The package simplifies the process of analyzing and reporting multilevel 
+    data by automating the creation of publication-ready tables.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    psych,
+    multilevel
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
