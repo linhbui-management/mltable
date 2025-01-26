@@ -1,13 +1,3 @@
----
-title: "README"
-output: github_document
-date: "2025-01-26"
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # mltable - Calculating and Formatting Statistics Tables for Multilevel Data
 
 This R package provides tools for calculating and formatting correlation matrices for Level 1 and Level 2 data. 
@@ -28,7 +18,6 @@ Here’s how to use the package:
 library(mltable)
 
 ## Level 1 Correlation Matrix (e.g., individual level)
-```{r}
 data <- teamstate
 var_list <- list(
     var1 = 3,
@@ -40,14 +29,10 @@ var_list <- list(
   result <- corr_level1(data,
                         var_list,
                         var_labels = c("Gender", "Age", "Positive Affect",
-                                   "Negative Affect", "Psychological Safety"))
+                                        "Negative Affect", "Psychological Safety"))
 print(result)
-```
-
-
 ## Level 2 Correlation Matrix (e.g., group level)
 # Example usage
-```{r}
 data <- teamstate
 var_list2 <- list(
                   var1 = 5:14,
@@ -60,7 +45,6 @@ result <- corr_level2(data = teamstate,
                       var_labels = c("Team PA", "Team NA", "Team Psychological Safety"),
                       rwg_scale = 7)
 print(result)
-```
 
 # Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
