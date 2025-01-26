@@ -1,4 +1,4 @@
-# <img src="logo_mltable.png" alt="logo" style="float:right; width:200px;"> Calculating and Formatting Statistics Tables for Multilevel Data
+# mltable - Calculating and Formatting Statistics Tables for Multilevel Data <img src="logo_mltable.png" alt="logo" style="float:right; width:200px;"> 
 
 
 [![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
