@@ -1,6 +1,6 @@
 # mltable - Calculating and Formatting Statistics Tables for Multilevel Data
 
-                <img src="logo_mltable.png" alt="logo" style="float:right; width:200px;">
+<img src="logo_mltable.png" alt="logo" style="float:right; width:200px;">
 
 [![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
 
@@ -11,18 +11,18 @@ It includes additional metrics such as mean, standard deviation, Cronbach's alph
 To install the package, use the following commands in R:
 
 ## Install the devtools package if you don't already have it
-install.packages("devtools")
+<install.packages("devtools")>
 
 ## Install the package from GitHub
-devtools::install_github("linhbui.management/mltable")
+<devtools::install_github("linhbui.management/mltable")>
 
 # Usage
 Here’s how to use the package:
 
-library(mltable)
+<library(mltable)>
 
 ## Level 1 Correlation Matrix (e.g., individual level)
-data <- teamstate
+<data <- teamstate
 var_list <- list(
     var1 = 3,
     var2 = 4,
@@ -34,10 +34,10 @@ var_list <- list(
                         var_list,
                         var_labels = c("Gender", "Age", "Positive Affect",
                                         "Negative Affect", "Psychological Safety"))
-print(result)
+print(result)>
 ## Level 2 Correlation Matrix (e.g., group level)
 # Example usage
-data <- teamstate
+<data <- teamstate
 var_list2 <- list(
                   var1 = 5:14,
                   var2 = 15:24,
@@ -48,7 +48,7 @@ result <- corr_level2(data = teamstate,
                       groupid = "Team",
                       var_labels = c("Team PA", "Team NA", "Team Psychological Safety"),
                       rwg_scale = 7)
-print(result)
+print(result)>
 
 # Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
