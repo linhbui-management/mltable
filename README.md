@@ -58,13 +58,9 @@ print(result)
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository.
-
 2. Create a new branch for your feature or bugfix.
-
 3. Commit your changes.
-
 4. Submit a pull request.
-
 5. Please ensure your code follows the project's coding standards and includes appropriate tests.
 
 # License
@@ -73,15 +69,15 @@ This project is licensed under the MIT License. See the LICENSE file for details
 # Contact
 For questions or feedback, please contact:
 
-Your Name: linhbui.management@gmail.com
-
+Linh Bui.
+Email: linhbui.management@gmail.com
 GitHub: linhbui-management
-
 Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
+
 If you use the mltable package in your work, please cite it as follows:
 
 ```r
