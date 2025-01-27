@@ -16,7 +16,6 @@ devtools::install_github("linhbui.management/mltable")
 Here’s how to use the package:
 
 
-
 ## Level 1 Correlation Matrix (e.g., individual level)
 
 ```r
@@ -81,13 +80,14 @@ GitHub: linhbui-management
 Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
 If you use the mltable package in your work, please cite it as follows:
 
 ```r
-Bui, L. (2025). mltable: A Package for Calculating and Formatting Correlation Matrices (Version 0.0.0.9000) [R package]. 
-Retrieved from https://github.com/linhbui-management/mltable.git
+Bui, L. (2025). mltable: An R package for calculating and formatting tables for multilevel data.
+https://doi.org/10.5281/zenodo.14744310. Retrieved from https://github.com/linhbui-management/mltable.git
 ```
-You can generate the citation directly in R by running `citation('mltable')`
 
 The core functionality of `mltable` relies on R packages `psych` and `multilevel`. 
 Please consider citing them as well:
@@ -99,3 +99,4 @@ Retrieved from https://CRAN.R-project.org/package=psych
 Bliese, P., Chen, G., Downes, P., Schepker, D., & Lang, J. (2022). Package 'multilevel' (Version 2.7) [R package]. 
 Retrieved from https://cran.r-project.org/web/packages/multilevel/index.html
 ```
+
