@@ -1,10 +1,16 @@
 # mltable - Calculating and Formatting Tables for Multilevel Data <img src="logo_mltable.png" align="right" width="220"/>
 
-[![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
 
-This R package provides tools for calculating and formatting correlation matrices for Level 1 and Level 2 data. 
-It includes additional metrics such as mean, standard deviation, Cronbach's alpha, and rwg.j.
-
+The 'mltable' package provides tools for generating descriptive statistics tables 
+and correlation matrices for multilevel data. It includes functions for calculating 
+level-1 and level-2 correlations, aggregating data by groups, and computing 
+additional statistics such as means, standard deviations, Cronbach's alpha, and 
+RWG(J). These functions are particularly useful for researchers working with 
+hierarchical or nested data structures, such as teams, organizations, or repeated 
+measures. The package simplifies the process of analyzing and reporting multilevel 
+data by automating the creation of publication-ready tables.
+    
 # Installation
 To install the package, use the following commands in R:
 
@@ -75,8 +81,6 @@ GitHub: linhbui-management
 Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
 
 If you use the mltable package in your work, please cite it as follows:
 
