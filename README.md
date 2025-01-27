@@ -8,7 +8,9 @@ level-1 and level-2 correlations, aggregating data by groups, and computing
 additional statistics such as means, standard deviations, Cronbach's alpha, and 
 RWG(J). These functions are particularly useful for researchers working with 
 hierarchical or nested data structures, such as teams, organizations, or repeated 
-measures. The package simplifies the process of analyzing and reporting multilevel 
+measures. 
+
+The package simplifies the process of analyzing and reporting multilevel 
 data by automating the creation of publication-ready tables.
     
 # Installation
@@ -75,9 +77,12 @@ This project is licensed under the MIT License. See the LICENSE file for details
 # Contact
 For questions or feedback, please contact:
 
-Linh Bui.
+Linh Bui
+
 Email: linhbui.management@gmail.com
+
 GitHub: linhbui-management
+
 Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
