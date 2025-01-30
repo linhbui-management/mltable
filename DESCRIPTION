@@ -4,16 +4,19 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Linh", "Bui", , "linhbui.management@gmail.com", role = c("aut", "cre"))
 Description: 
-    This R package provides tools for calculating and formatting correlation matrices 
-    for Level 1 and Level 2 data. It includes additional metrics such as mean, 
+    This R package provides tools for calculating and formatting correlation matrices for multilevel data.
+    It includes additional metrics such as mean, 
     standard deviation, Cronbach's alpha, and rwg.j.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Depends:
+    R (>= 3.5.0),
+    multilevel,
+    stats
 Imports:
-    psych,
-    multilevel
+    psych
 Suggests:
     knitr,
     rmarkdown,

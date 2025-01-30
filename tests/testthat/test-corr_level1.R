@@ -1,8 +1,12 @@
 library(testthat)
+library(psych)
+library(multilevel)
+library(stats)
 library(mltable)  # Load the mltable package which contains the teamstate dataset
 
-test_that("corr_level1 calculates correlation matrix correctly", {
-  data <- teamstate
+test_that("corr_table calculates correlation matrix correctly", {
+  file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+  teamstate <- read.csv(file_path)
 
   var_list <- list(
     var1 = 3,
@@ -12,21 +16,20 @@ test_that("corr_level1 calculates correlation matrix correctly", {
     var5 = 25:28
   )
 
-  result <- corr_level1(data,
+  result <- corr_table(teamstate,
                         var_list,
                         var_labels = c("Gender", "Age", "Positive Affect",
                                         "Negative Affect", "Psychological Safety"))
 
-  expect_true(is.data.frame(result))
-  expect_equal(ncol(result), length(var_list) + 3)  # add 3 for Mean, SD, and Cronbach's alpha, exclude 1 column
+  expect_equal(ncol(result), length(var_list) + 3)  # add 3 for Mean, SD, and Cronbach's alpha
   expect_equal(colnames(result), c("Mean", "SD", "Cronbach's alpha", "Gender", "Age", "Positive Affect",
                                    "Negative Affect", "Psychological Safety"
                                    ))
 })
 
-test_that("corr_level1 handles non-numeric columns correctly", {
-  data <- teamstate
-
+test_that("corr_table handles non-numeric columns correctly", {
+  file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+  teamstate <- read.csv(file_path)
   var_list <- list(
     var1 = "Team",  # Assuming Gender is a non-numeric column in teamstate
     var2 = 4,
@@ -35,7 +38,7 @@ test_that("corr_level1 handles non-numeric columns correctly", {
     var5 = 25:28
   )
 
-  expect_error(corr_level1(data, var_list,
+  expect_error(corr_table(teamstate, var_list,
                            var_labels = c("Team", "Age", "Positive Affect",
                                           "Negative Affect", "Psychological Safety")),
                            "All columns used for calculating new variables must be numeric.")

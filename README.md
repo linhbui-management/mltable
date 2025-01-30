@@ -1,11 +1,11 @@
-# mltable - Calculating and Formatting Tables for Multilevel Data <img src="logo_mltable.png" align="right" width="220"/>
+# mltable - Calculating and Formatting Tables for Multilevel Data <img src="inst/logo_mltable.png" align="right" width="220"/>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
 
 The 'mltable' package provides tools for generating descriptive statistics tables 
 and correlation matrices for multilevel data. It includes functions for calculating 
-level-1 and level-2 correlations, aggregating data by groups, and computing 
-additional statistics such as means, standard deviations, Cronbach's alpha, and 
+correlations, aggregating data by groups, and computing additional statistics 
+such as means, standard deviations, Cronbach's alpha, and 
 RWG(J). These functions are particularly useful for researchers working with 
 hierarchical or nested data structures, such as teams, organizations, or repeated 
 measures. 
@@ -24,7 +24,7 @@ devtools::install_github("linhbui.management/mltable")
 Here’s how to use the package:
 
 
-## Level 1 Correlation Matrix (e.g., individual level)
+## Correlation Matrix 
 
 ```r
 library(mltable)
@@ -36,7 +36,7 @@ var_list <- list(
     var4 = 15:24,
     var5 = 25:28)
 
-  result <- corr_level1(data,
+  result <- corr_table(data,
                         var_list,
                         var_labels = c("Gender", "Age", "Positive Affect",
                                         "Negative Affect", "Psychological Safety"))
@@ -44,7 +44,7 @@ var_list <- list(
 print(result)>
 ```
 
-## Level 2 Correlation Matrix (e.g., group level)
+## Correlation Matrix Using Lower-level Data (e.g., group-level correlation matrix using individual-level data)
 
 ```r
 data <- teamstate
@@ -98,6 +98,8 @@ The core functionality of `mltable` relies on R packages `psych` and `multilevel
 Please consider citing them as well:
 
 ```
+R Core Team. (2021). R: A language and environment for statistical computing. R Foundation for Statistical Computing. https://www.R-project.org/
+
 Revelle, W. (2023). psych: Procedures for Psychological, Psychometric, and Personality Research [R package]. 
 Retrieved from https://CRAN.R-project.org/package=psych
 

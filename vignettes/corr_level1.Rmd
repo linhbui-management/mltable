@@ -1,5 +1,5 @@
 ---
-title: "Vignette for corr_level1 Function"
+title: "Vignette for corr_table Function"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{corr_level1}
@@ -12,7 +12,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   warning = FALSE,
-  message = FALSE
+  message = FALSE,
+  options(rmarkdown.html_vignette.check_title = FALSE)
 )
 ```
 
@@ -20,7 +21,7 @@ knitr::opts_chunk$set(
 
 
 # Introduction
-This vignette demonstrates how to use the corr_level1 function to calculate and format correlation matrices with additional metrics like mean, standard deviation, and Cronbach's alpha.
+This vignette demonstrates how to use the corr_table function to calculate and format correlation matrices with additional metrics like mean, standard deviation, and Cronbach's alpha.
 
 Example
 
@@ -32,7 +33,8 @@ library(mltable)
 library(psych)  # For Cronbach's alpha calculation
 
 # Load built-in dataset
-data(teamstate)
+file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+teamstate <- read.csv(file_path)
 ```
 
 # Basic Usage
@@ -51,13 +53,12 @@ var_list <- list(
 
 ## Generate Correlation Matrix
 ```{r}
-result <- corr_level1(
+result <- corr_table(
   data = teamstate,
   var_list = var_list,
-  var_labels = c("Gender", "Age", "Positive Affect", 
-                "Negative Affect", "Psychological Safety"),
-  digits = 2
+  var_labels = c("Gender", "Age", "Positive Affect", "Negative Affect", "Psychological Safety")
 )
+
 ```
 
 # Key Features
@@ -80,7 +81,7 @@ Default pairwise deletion (use = "pairwise.complete.obs")
 ## Show upper triangle with 2 decimal places and Keep leading zeros
 
 ```{r}
-corr_level1( 
+corr_table( 
   teamstate, var_list, 
   triangle = "upper", 
   digits = 2, 
@@ -90,7 +91,7 @@ corr_level1(
 
 ## Suppress Metrics
 ```{r}
-corr_level1( 
+corr_table( 
   teamstate, var_list, 
   mean = FALSE, 
   alpha = FALSE 
@@ -113,4 +114,4 @@ Use column names instead of indices for reliability.
 
 Check variable labels match var_list order.
 
-For complete documentation: ?corr_level1
+For complete documentation: ?corr_table

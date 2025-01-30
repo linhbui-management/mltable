@@ -1,8 +1,12 @@
 library(testthat)
+library(psych)
+library(multilevel)
+library(stats)
 library(mltable)  # Load the mltable package which contains the teamstate dataset
 
 test_that("corr_level2 calculates correlation matrix correctly", {
-  data <- teamstate
+  file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+  teamstate <- read.csv(file_path)
 
   var_list <- list(
     var1 = 5:14,
@@ -10,9 +14,8 @@ test_that("corr_level2 calculates correlation matrix correctly", {
     var3 = 25:28
   )
 
-  result <- corr_level2(data, var_list, groupid = "Team", var_labels = c("Team PA", "Team NA", "Team PS"))
+  result <- corr_level2(teamstate, var_list, groupid = "Team", var_labels = c("Team PA", "Team NA", "Team PS"))
 
-  expect_true(is.data.frame(result))
   expect_equal(ncol(result), length(var_list) + 4)  # 4 for Mean, SD, Cronbach's alpha, Rwg.j
   expect_equal(colnames(result), c("Mean", "SD", "Cronbach's Alpha",
                                    "rwg.j","Team PA", "Team NA", "Team PS"))

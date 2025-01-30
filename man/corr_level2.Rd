@@ -95,9 +95,9 @@ formats the results, and includes additional metrics such as mean, standard devi
 Cronbach's alpha, and mean or median rwg.j if requested.
 }
 \examples{
-# Example usage
-data <- teamstate
 \dontrun{
+file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+teamstate <- read.csv(file_path)
 var_list2 <- list(
   var1 = 5:14,
   var2 = 15:24,
