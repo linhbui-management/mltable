@@ -43,13 +43,16 @@
 #' response options (e.g., 1 = Strongly Disagree to 5 = Strongly Agree). Default is 5.
 #' @param rwg_method The method for calculating rwg.j.
 #' Options are "mean" (default) or "median".
+#' @importFrom stats cor.test
+#' @importFrom stats aggregate median
+#' @import multilevel
 #' @return A formatted correlation matrix as a data frame, which can be exported
 #' as a CSV file.
 #'
 #' @examples
-#' # Example usage
-#' data <- teamstate
 #' \dontrun{
+#' file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+#' teamstate <- read.csv(file_path)
 #' var_list2 <- list(
 #'   var1 = 5:14,
 #'   var2 = 15:24,
@@ -89,13 +92,19 @@ corr_level2 <- function(data,
 
   # Require and load necessary packages
   require_package <- function(pkg) {
-    if (!require(pkg, character.only = TRUE)) {
+    if (!requireNamespace(pkg, quietly = TRUE)) {
       install.packages(pkg, dependencies = TRUE)
-      library(pkg, character.only = TRUE)
     }
+    library(pkg, character.only = TRUE)
   }
+
   require_package("psych")
   require_package("multilevel")
+
+  # Ensure the 'stats' package for cor.test is available
+  if (!requireNamespace("stats", quietly = TRUE)) {
+    stop("The 'stats' package is required but not available.")
+  }
 
   # Match arguments
   type <- match.arg(type)
@@ -116,6 +125,15 @@ corr_level2 <- function(data,
     is.logical(rwg)
     is.numeric(rwg_scale) && rwg_scale > 0
   })
+
+  # Initialize an empty data frame with the correct number of rows
+  # Ensure that data is not empty and num_rows is correctly calculated
+  if (!is.data.frame(data) || nrow(data) == 0) {
+    stop("The data frame has no rows or is not a data frame.")
+  }
+
+  num_rows <- nrow(data)
+  df <- data.frame(matrix(nrow = num_rows, ncol = 0))
 
   # Check if groupid exists in data
   if (!groupid %in% colnames(data)) {
@@ -172,7 +190,7 @@ corr_level2 <- function(data,
                     ifelse(p_values < .001, "***",
                            ifelse(p_values < .01, "**",
                                   ifelse(p_values < .05, "*",
-                                         ifelse(p_values < .10, "†", "")))))
+                                         ifelse(p_values < .10, "\u00A0", "")))))
     Rformatted <- paste0(Rformatted, stars)
   }
 
@@ -235,8 +253,6 @@ corr_level2 <- function(data,
     rownames(Rnew) <- var_labels
   }
 
-  # Convert matrix to data frame
-  Rnew <- as.data.frame(Rnew, stringsAsFactors = FALSE)
 
   # Preserve row names if using labels
   if (!is.null(var_labels)) {
