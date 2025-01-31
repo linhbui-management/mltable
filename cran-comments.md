@@ -18,8 +18,3 @@ This is a new submission of the `mltable` package.
 
 There were no ERRORs or WARNINGs.
 
-There was 1 NOTE:
-
-* Found the following hidden files and directories:
-  .travis.yml, .github
-  These were most likely included in error. See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
