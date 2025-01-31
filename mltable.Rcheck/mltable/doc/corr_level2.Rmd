@@ -1,0 +1,120 @@
+---
+title: "Vignette for corr_level2 Function"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{corr_level2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE,
+  options(rmarkdown.html_vignette.check_title = FALSE)
+)
+```
+
+
+# Introduction
+This vignette demonstrates how to use corr_level2 to calculate group-level correlations with additional multilevel metrics including rwg.j (within-group agreement) and reliability estimates.
+
+# Setup
+```{r}
+library(mltable)
+library(multilevel)  # For rwg.j calculation
+library(psych)       # For Cronbach's alpha
+
+# Load built-in dataset
+file_path <- system.file("extdata", "teamstate.csv", package = "mltable")
+teamstate <- read.csv(file_path)
+```
+
+# Basic Usage
+## Define Group Structure
+
+```{r}
+var_list2 <- list(
+   var1 = 5:14,    # Team positive affect
+   var2 = 15:24,   # Team negative affect
+   var3 = 25:28    # Team psychological safety
+  )
+```
+
+## Generate Group-Level Correlations
+```{r}
+result <- corr_level2(data = teamstate,
+                      var_list = var_list2,
+                      groupid = "Team",  # Group identifier column
+                      var_labels = c("Team PA", "Team NA", "Team PS"),
+                      rwg_scale = 7,     # 7-point response scale
+)
+```
+
+# Key Features
+##1. Multilevel Metrics
+rwg.j: Within-group agreement (mean as default)
+
+Reliability calculated by Level 1 items: Cronbach's alpha
+
+Aggregated means/SDs
+
+##2. Specialized Handling
+Automatic data aggregation by group.
+
+Missing data handling.
+
+Response scale specification for rwg.j (e.g., 5-Likert scale as default, you may change to 7 of your survey use 7-Likert scale).
+
+##3. Presentation Options
+Flexible triangle formatting
+
+Significance indicators
+
+Decimal control
+
+# Advanced Customization
+## Median rwg.j with 7-point Scale
+```{r}
+corr_level2(
+  teamstate,
+  var_list2,
+  groupid = "Team",
+  rwg_method = "median",
+  rwg_scale = 7,
+  lead.decimal = FALSE
+)
+```
+
+## Minimal Output
+```{r}
+corr_level2(
+  teamstate,
+  var_list2,
+  groupid = "Team",
+  mean = FALSE,
+  alpha = FALSE,
+  rwg = FALSE
+)
+```
+
+## Export Results
+Save the formatted matrix as a CSV file.
+```{r}
+write.csv(result, "team_level_correlations.csv", row.names = TRUE)
+```
+
+# Important Notes
+Requires valid group identifier column.
+
+rwg.j requires ≥2 items per construct.
+
+Response scale must match actual item range.
+
+All constructs must be numeric.
+
+Install multilevel package first if missing.
+
+For complete documentation: ?corr_level2
