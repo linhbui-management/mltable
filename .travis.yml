@@ -1,16 +1,10 @@
 language: r
+cache: packages
 
 before_install:
-  - R -e "install.packages('devtools', repos = 'https://cloud.r-project.org')"
-
-install:
-  - R -e "devtools::install_deps(dependencies = TRUE)"
+  - R -e 'install.packages("devtools", repos = "https://cloud.r-project.org")'
 
 script:
+  - R -e "devtools::install_deps(dependencies = TRUE)"
   - R CMD build .
   - R CMD check *tar.gz
-
-# Optionally, you can specify the R version if needed
-r:
-  - release
-  - devel
