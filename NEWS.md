@@ -1,4 +1,4 @@
-# mltable 0.1.0 (2024-31-01)
+# mltable 0.1.0 (2025-31-01)
 ## Bug Fixes
 - Fixed a bug in the table rendering function.
 - Improved error handling for invalid inputs.

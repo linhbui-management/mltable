@@ -4,8 +4,10 @@ cache: packages
 before_install:
   - R -e 'install.packages("devtools", repos = "https://cloud.r-project.org")'
 
-script:
+install:
   - R -e "devtools::install_deps(dependencies = TRUE)"
+
+script:
   - R CMD build .
   - R CMD check *tar.gz --as-cran
 

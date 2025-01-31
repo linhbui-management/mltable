@@ -1,6 +1,6 @@
 # mltable - Calculating and Formatting Tables for Multilevel Data <img src="inst/logo_mltable.png" align="right" width="220"/>
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
+[![Build Status](https://app.travis-ci.com/linhbui-management/mltable.svg?token=4VKpm7KznzmjKM9vcLMv&branch=main)](https://app.travis-ci.com/linhbui-management/mltable)
 
 The 'mltable' package provides tools for generating descriptive statistics tables 
 and correlation matrices for multilevel data. It includes functions for calculating 
@@ -86,6 +86,8 @@ GitHub: linhbui-management
 Project Link: https://github.com/linhbui-management/mltable
 
 # Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14744310.svg)](https://doi.org/10.5281/zenodo.14744310)
 
 If you use the mltable package in your work, please cite it as follows:
 
