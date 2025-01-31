@@ -5,8 +5,8 @@
 The 'mltable' package provides tools for generating descriptive statistics tables 
 and correlation matrices for multilevel data. It includes functions for calculating 
 correlations, aggregating data by groups, and computing additional statistics 
-such as means, standard deviations, Cronbach's alpha, and 
-RWG(J). These functions are particularly useful for researchers working with 
+such as means, standard deviations, Cronbach's alpha, and rwg.j. 
+These functions are particularly useful for researchers working with 
 hierarchical or nested data structures, such as teams, organizations, or repeated 
 measures. 
 

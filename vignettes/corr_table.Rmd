@@ -2,7 +2,7 @@
 title: "Vignette for corr_table Function"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{corr_level1}
+  %\VignetteIndexEntry{corr_table}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

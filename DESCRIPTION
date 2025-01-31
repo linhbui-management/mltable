@@ -9,6 +9,7 @@ Description:
     standard deviation, Cronbach's alpha, and rwg.j.
 License: MIT + file LICENSE
 Encoding: UTF-8
+Language: en-US
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends:
