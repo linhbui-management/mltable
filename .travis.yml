@@ -1,9 +1,11 @@
 language: r
 cache: packages
+r:
+  - release
 
 install:
-  - R -e 'install.packages("devtools", repos = "https://cloud.r-project.org")'
-  - R -e "devtools::install_deps(dependencies = TRUE)"
+  - R -e 'install.packages("remotes", repos = "https://cloud.r-project.org")'
+  - R -e "remotes::install_deps(dependencies = TRUE)"
 
 script:
   - R CMD build .
