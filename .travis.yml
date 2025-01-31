@@ -7,4 +7,6 @@ before_install:
 script:
   - R -e "devtools::install_deps(dependencies = TRUE)"
   - R CMD build .
-  - R CMD check *tar.gz
+  - R CMD check *tar.gz --as-cran
+
+warnings_are_errors: true

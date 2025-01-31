@@ -1,2 +1,5 @@
 ^mltable\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
+^\.github$
+
