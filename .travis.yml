@@ -1,10 +1,8 @@
 language: r
 cache: packages
 
-before_install:
-  - R -e 'install.packages("devtools", repos = "https://cloud.r-project.org")'
-
 install:
+  - R -e 'install.packages("devtools", repos = "https://cloud.r-project.org")'
   - R -e "devtools::install_deps(dependencies = TRUE)"
 
 script:
